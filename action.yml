@@ -1,0 +1,12 @@
+name: "Hello World"
+description: "An example GitHub action written in Go"
+runs:
+  using: "docker"
+  image: "Dockerfile"
+  args:
+    - "${{ inputs.name }}"
+inputs:
+  name:
+    required: true
+    default: "Unknown"
+    description: "Your name"
