@@ -3,6 +3,8 @@ description: "An example GitHub action written in Go"
 runs:
   using: "docker"
   image: "Dockerfile"
+  args:
+    - ${{ name }}
 inputs:
   name:
     required: true
